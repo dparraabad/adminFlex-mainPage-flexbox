@@ -1,0 +1,35 @@
+
+/* Media Queries */
+@mixin mobile {
+    @media only screen and (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media only screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+/* Buttons */
+@mixin button($color) {
+    padding: .5rem 1rem;
+    display: block;
+    background-color: $color;
+    transition: background-color .3s ease;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    color: $white;
+    &:hover {
+        cursor: pointer;
+        background-color: darken($color, 10);
+    }
+}

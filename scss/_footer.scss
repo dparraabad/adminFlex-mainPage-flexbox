@@ -1,0 +1,16 @@
+/* Footer */
+.footer {
+  background-color:darken($gray, 25);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $black;
+
+  p {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  @include tablet {
+    font-size: 1.3rem;
+  }
+}

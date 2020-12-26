@@ -1,0 +1,217 @@
+/* Container */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 30rem;
+  padding: 1rem 2rem 2rem;
+  transition: margin-left 0.3s ease;
+  background: $gray-dark;
+  color: $white;
+
+  .user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2rem;
+
+    img {
+      max-width: 7rem;
+      padding: 1rem;
+    }
+
+    span {
+      padding: 0.3rem;
+      font-weight: bold;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  .search {
+    margin-top: 1rem;
+
+    input[type="text"] {
+      width: 100%;
+      height: 3rem;
+      padding-left: 1rem;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.menu-admin {
+  margin: 2rem 0 0 1rem;
+  font-size: 1.3rem;
+
+  h2 {
+    padding-bottom: 1rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  .options {
+    list-style: none;
+    padding-left: 1rem;
+
+    > li {
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: $secondary;
+
+        ul {
+          display: block;
+        }
+      }
+
+      a {
+        padding: .6rem;
+        transition: padding-left .3s ease;
+        text-decoration: none;
+        color: $white;
+      }
+
+      ul {
+        display: none;
+        margin-top: 0.6rem;
+        padding: 1rem;
+        list-style: none;
+        background-color: darken($primary, 3);
+        li {
+          margin-bottom: 1rem;
+
+          a {
+            &:hover {
+              padding-left: 2rem;
+            }
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 2rem;
+  font-size: 1.2rem;
+
+  h2 {
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  .field {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.3rem;
+
+    span {
+      flex: 0 0 25%;
+    }
+
+    input {
+      flex: 1;
+      padding: .5rem;
+      border: 1px solid $black;
+      border-radius: .3rem;
+      outline: none;
+    }
+
+    &.extends {
+      flex: 0 0 100%;
+
+      span {
+        flex: 0 0 25%;
+
+        @include tablet {
+          flex: 0 0 12.5%;
+        }
+      }
+      
+       textarea {
+        flex: 1;
+        padding: .4rem;
+        border-radius: .3rem;
+        outline: none;
+      }
+
+      &.send {
+        flex: 1;
+
+        .button {         
+          @include button($primary);
+        }
+  
+        @include tablet {
+          flex: 0;
+          margin-left: auto;
+
+        }
+      }
+
+      @include tablet {
+        flex: 0 0 calc(100% - 1rem);
+      }
+    }
+
+    .membership {
+      flex-basis: 100%;
+    }
+
+    .options {
+      flex: 0 0 75%;
+      display: flex;
+      flex-wrap: wrap;
+      
+      label {
+        padding: 0 .4rem;
+      }
+    }
+
+    @include tablet {
+      flex: 0 0 calc(50% - 1rem);
+      margin-left: 1rem;
+    }
+  }
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+}

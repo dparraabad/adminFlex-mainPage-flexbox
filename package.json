@@ -1,0 +1,29 @@
+{
+  "name": "adminFlex-mainPage-flexbox",
+  "version": "1.0.0",
+  "description": "Main page of AdminFlex",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dparraabad/adminFlex-mainPage-flexbox.git"
+  },
+  "keywords": [],
+  "author": "Diego Parra <dparraabad@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dparraabad/adminFlex-mainPage-flexbox/issues"
+  },
+  "homepage": "https://github.com/dparraabad/adminFlex-mainPage-flexbox#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}
